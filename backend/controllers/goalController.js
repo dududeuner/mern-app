@@ -35,7 +35,7 @@ const setGoals = asyncHandler(async (req, res) => {
 // @route PUT /api/goal/:id
 // @access Private
 
-const uptadeGoal = asyncHandler(async (req, res) => {
+const updateGoal = asyncHandler(async (req, res) => {
   const goal = await Goal.findById(req.params.id);
 
   if (!goal) {
@@ -43,7 +43,7 @@ const uptadeGoal = asyncHandler(async (req, res) => {
     throw new Error("Goal not found");
   }
 
-  const uptadeGoal = await Goal.findByIdAndUpdate(req.params.id, req.body, {
+  const updatedGoal = await Goal.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
   });
 
@@ -72,6 +72,6 @@ const deleteGoal = asyncHandler(async (req, res) => {
 module.exports = {
   getGoals,
   setGoals,
-  uptadeGoal,
+  updateGoal,
   deleteGoal,
 };
