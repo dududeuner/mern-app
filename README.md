@@ -21,4 +21,4 @@ npm run server
 
 
 
-https://goalsetterdudu.herokuapp.com/
+https://goalsapp-one.vercel.app/login
